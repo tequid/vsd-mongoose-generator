@@ -7,11 +7,11 @@
     "test": "test"
   },
   "dependencies": {
-    "mongoose": "^3.8.16"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node test"
+    "test": "node test",
+    "mongoose": "^3.8.16"
   },
   "author": "",
   "license": "ISC"
