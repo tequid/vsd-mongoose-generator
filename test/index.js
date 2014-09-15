@@ -1,17 +1,10 @@
 
-var mongoose = require('mongoose');
-var db = require('../lib')(mongoose);
-var dbdata = require('./test.json');
+var generator = require('../lib');
+var modelData = require('./test.json');
 
-var schemas = db.generateSchemas(dbdata);
+var schemas = generator.generateSchemas(modelData);
 
-
-var models = {};
-
-// build models
-for (var name in schemas) {
-  models[name] = mongoose.model(name, schemas[name]);
-}
+var models = generator.generateModels(schemas);
 
 // log paths
 for (var name in models) {
