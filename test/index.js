@@ -1,9 +1,9 @@
 
-var generator = require('../lib');
+var mongoose = require('mongoose');
+var generator = require('../lib')(mongoose);
 var modelData = require('./test.json');
 
 var schemas = generator.generateSchemas(modelData);
-
 var models = generator.generateModels(schemas);
 
 // log paths
